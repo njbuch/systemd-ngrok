@@ -1,23 +1,13 @@
 # Installation
 
-Step 1: Place [`ngrok`](https://ngrok.com/download) in `/opt/ngrok/`.
+Step 1: git clone  https://github.com/njbuch/systemd-ngrok.git
 
-Step 2: Get `authtoken` from ngrok website, then add it to `/opt/ngrok/ngrok.yml`.
+Step 2: Get `authtoken` from ngrok.com on Auth menu item - copy to clipboard
 
-Step 3. Modify your own configrations in `/opt/ngrok/ngrok.yml`.
+Step 3. cd systemd-ngrok
 
-Step 4: Add `ngrok.service` to `/lib/systemd/system/`.
+Step 4: sudo ./install.sh <the token - pasted>
 
-Step 5: Start ngrok service by typing:
+Done...
 
-```
-    systemctl enable ngrok.service
-    systemctl start ngrok.service
-```
-
-or just execute `install.sh` on Linux x64 platform.
-
-```
-    chmod +x install.sh
-    ./install.sh <your_authtoken>
-```
+Now you can find the tunnel info on the ngrok.com dashboard after a short while... :)
